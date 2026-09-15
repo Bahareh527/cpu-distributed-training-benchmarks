@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Downloaded datasets and generated benchmark output
+data/
+logs/
+artifacts/
+
+.DS_Store
+Thumbs.db

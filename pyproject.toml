@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cpu-distributed-training-benchmarks"
+version = "1.0.0"
+description = "Reproducible CPU benchmarks for parameter-server, ring-allreduce, and PyTorch DDP training."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Forough Mohammadamini"},
+  {name = "Bahareh Keshavarz"},
+  {name = "Mojtaba Sharifian"},
+  {name = "Daniel Hiel"},
+]
+dependencies = [
+  "torch>=2.2",
+  "torchvision>=0.17",
+  "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.urls]
+Repository = "https://github.com/Bahareh527/cpu-distributed-training-benchmarks"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+markers = ["integration: launches multiple local processes"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
