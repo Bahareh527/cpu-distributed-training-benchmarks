@@ -5,7 +5,7 @@ version: 1.0.0
 date-released: 2026-09-12
 type: software
 license: MIT
-author:
+authors:
   - family-names: Keshavarz
     given-names: Bahareh
 repository-code: "https://github.com/Bahareh527/cpu-distributed-training-benchmarks"
